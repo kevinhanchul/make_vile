@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("")
-public class BuyVileCtr {
+public class MenuCtr {
     private BuyVileSvc buyVilesvc;
-    @PostMapping("buyVileCtr")
+    @PostMapping("buyVile")
     public void buyVile(){
         buyVilesvc.buyVile();
     }
