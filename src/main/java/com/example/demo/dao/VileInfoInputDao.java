@@ -3,5 +3,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface VileInfoInputDao {
-    void buyVile();
+    void vileInfoInput();
 }

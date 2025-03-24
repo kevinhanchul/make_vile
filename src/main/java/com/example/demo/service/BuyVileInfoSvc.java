@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class BuyVileInfoSvc {
     private BuyVileInfoDao buyVileInfoDao;
     public void buyVileInfo(){
-        buyVileInfoDao.buyVileInfoDao();
+        buyVileInfoDao.buyVileInfo();
     }
 }

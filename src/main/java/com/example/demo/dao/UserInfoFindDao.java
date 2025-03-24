@@ -3,5 +3,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface UserInfoFindDao {
-    void buyVile();
+    void userInfoFind();
 }
