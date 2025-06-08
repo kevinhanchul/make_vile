@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<input type="text" id="a1"><br>
+<input type="text" id="a2"><br>
+<input type="text" id="a3"><br>
+<input type="button" onclick="fn_abc()"><br>
+아이디<p id="data1" th:text="${data1}"></p>
+패스워드<p id="data2" th:text="${data2}"></p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function fn_abc(){
+       console.log("abc");
+
+       var no = {
+        no1: $('#data1').text(),
+        no2: $('#data2').text()
+       };
+
+       $.ajax({
+           type: 'POST',
+           url: '/abc',
+           contentType: 'application/json',
+           data: JSON.stringify( no ),
+           success: function(response) {
+               var a = 0;
+               a = no.no1 + no.no2;
+               console.log("abc");
+               $('#a1').val(a);
+               $('#a2').val($('#data2').text());
+           },
+           error: function(error) {
+              console.log("abc");
+           }
+
+       });
+
+    }
+</script>
+
+
+</html>
+
